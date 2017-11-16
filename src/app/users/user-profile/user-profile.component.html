@@ -1,0 +1,7 @@
+<form name="input-test">
+  <input name="input" [(ngModel)]="username" />
+  <button type="submit" (click)="onButtonClicked($event)">Reset</button>
+</form>
+<!--<h1>{{username}}</h1>-->
+
+<p *ngFor="let name of usernames">{{name}}</p>
