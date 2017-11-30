@@ -12,7 +12,7 @@ export class GreatComponent {
      * Cay Gaynial
      */
     constructor() {
-        this.title = 'Ma super variable';
+        this.title = 'Bienvenue sur mon site Angular de test !';
     }
 }
 

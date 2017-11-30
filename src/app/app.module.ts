@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
+import { UserFacebookComponent } from './users/user-facebook/user-facebook.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { UserProfileComponent } from './users/user-profile/user-profile.componen
     AppComponent,
     GreatComponent,
     UserProfileComponent,
+    UserFacebookComponent,
   ],
   imports: [
     BrowserModule,

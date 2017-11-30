@@ -1,0 +1,57 @@
+/*table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}*/
+.logs{
+    margin: 0px;
+    padding: 0px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 25px;
+}
+
+table.logs tr:first-child td:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 3px;
+}
+
+table.logs tr:last-child td:last-child {
+    padding-bottom: 3px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.logs tr{
+    margin: 0px;
+}
+
+.logs td{
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    width: 800px;
+}
+
+.logs td:first-child{
+    padding-left: 10px;
+}
+
+.logs td.info{
+    color: white;
+}
+
+.logs td.warning{
+    color: yellow;
+}
+
+.logs td.error{
+    color: red;
+}

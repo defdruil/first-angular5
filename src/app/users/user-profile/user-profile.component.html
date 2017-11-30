@@ -1,7 +1,22 @@
-<form name="input-test">
-  <input name="input" [(ngModel)]="username" />
-  <button type="submit" (click)="onButtonClicked($event)">Reset</button>
+<form name="input-test" class="form-group form-inline">
+  <label name="input">Saisir un log :
+    <input name="input" [(ngModel)]="username" class="form-control"/>
+  </label>
+  <select name="severity" [(ngModel)]="severity" class="form-control">
+    <option selected value="error">Error</option>
+    <option value="warning">Warning</option>
+    <option value="info">Info</option>
+  </select>
+  <button class="btn btn-primary" type="submit" (click)="onButtonClicked($event)">Ajouter</button>
 </form>
+<!--<p>{{username}}</p>-->
 <!--<h1>{{username}}</h1>-->
-
-<p *ngFor="let name of usernames">{{name}}</p>
+<h3>Logs : </h3>
+<table class="logs">
+  <tr *ngFor="let log of usernames">
+    <td [ngClass]="{'info': log.severity == 'INFO', 'error': log.severity == 'ERROR', 'warning': log.severity == 'WARNING'}">[{{log.severity}} - {{log.date}}] : {{log.text}}</td>
+    <!--<td>
+      <app-user-facebook></app-user-facebook>
+    </td>-->
+  </tr>
+</table>

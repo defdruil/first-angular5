@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class UserProfileComponent implements OnInit {
 
   username: string;
-  usernames: Array<string>;
+  severity: string;
+  usernames: Array<any>;
 
   constructor() {
     this.username = '';
     this.usernames = [];
+    this.severity = 'info';
   }
 
   ngOnInit() {
@@ -20,8 +22,13 @@ export class UserProfileComponent implements OnInit {
 
   onButtonClicked(event: Event): void {
     if (this.username !== '') {
-      this.usernames.push(this.username);
+      const date: Date = new Date();
+      this.usernames.push({
+        text: this.username,
+        severity: this.severity.toUpperCase(),
+        date: date.getHours() + ':' + date.getSeconds()});
       this.username = '';
+      console.log(this.usernames);
     }
   }
 
